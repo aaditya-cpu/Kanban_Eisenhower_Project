@@ -1592,11 +1592,11 @@ a#expHidden {
 }
 
 .l-footer > span button#josetxuBtn {
-    background: url(https://assets.codepen.io/256997/internal/avatars/users/default.png?width=32) no-repeat center center #ffffff;
+    background: url(https://media.licdn.com/dms/image/D4D03AQFU0eY9mLYMNQ/profile-displayphoto-shrink_200_200/0/1678453163901?e=1717632000&v=beta&t=qv1Mad8JrMnO_ihdiFjuVyehp0zJruWwnDvyuU3_obI) no-repeat center center #ffffff;
     background-size: calc(32px);
 }
 .l-footer > span button#josetxuBtn:before {
-    content: "JOSETXU";
+    content: "ZDMS";
     color: #ff6600;
     margin-top: -1px;
 }
