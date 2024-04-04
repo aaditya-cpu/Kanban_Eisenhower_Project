@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap3.3.css">
+    <link rel="stylesheet" href="/css/eisen.css">
+</head>
+<body>
+    <div id="iu" class="box">
+        <h4>
+            Important & Urgent 
+            <button class="btn btn-sm btn-default" data-id="iu">ADD</button>
+        </h4>
+        <ul>
+            <li><input type='text' focus='true' placeholder='example: Submit paper due midnight'><span class='glyphicon glyphicon-remove' aria-hidden='true'></span></li>
+        </ul>
+    </div>
+    <div id="nu" class="box">
+        <h4>
+            Important & Not Urgent
+            <button class="btn btn-sm btn-default" data-id="nu">ADD</button>
+        </h4>
+        <ul>
+            <li><input type='text' focus='true' placeholder='example: Apply for ABC testings (2 month from now)'><span class='glyphicon glyphicon-remove' aria-hidden='true'></span></li>
+        </ul>
+    </div>
+    <div id="in" class="box">
+        <h4>
+            Not Important & Urgent
+            <button class="btn btn-sm btn-default" data-id="in">ADD</button>
+        </h4>
+        <ul></ul>
+    </div>
+    <div id="nn" class="box">
+        <h4>
+            Not Important & Not Urgent
+            <button class="btn btn-sm btn-default" data-id="nn">ADD</button>
+        </h4>
+        <ul><li><input type='text' focus='true' placeholder='example: watch random youtube videos'><span class='glyphicon glyphicon-remove' aria-hidden='true'></span></li></ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/js/eisenhower.js"></script>
+</body>
+</html>

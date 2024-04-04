@@ -1,0 +1,52 @@
+* { outline: none; }
+h4{
+    text-align: center;
+    color: rgba(0,0,0,0.5);
+    font-style: italic;
+    font-family: oswald;
+} 
+h6 { background: #a0f2b6; margin: 0; text-align: center; 
+		font-weight: bold; 
+	height: 30px; line-height: 30px; }
+.box { 
+	display: block;
+	float: left;
+	width: 50%; 
+	padding: 10px;
+	overflow: auto;
+}
+button { 
+	float: left; 
+	background: rgba(0,0,0,0.1) !important;
+	border: none !important;
+	color: rgba(0,0,0,0.3) !important;
+}
+#iu { background: #a0f2b6; }
+#nu { background: #9bd7fa; }
+#in { background: #e3a674; }
+#nn { background: #e68e87; }
+ul { padding-top: 15px; }
+li {
+	list-style-type: none;
+}
+input[type="text"] {
+	border: none;
+	background: none;
+	width: 90%;
+	padding: 5px 5px 5px 10px;
+	border-radius: 25px;
+	color: rgba(0,0,0,0.5);
+	transition: background 0.3s;
+}
+input[type="text"]:focus {
+	background: rgba(0,0,0,0.1);
+}
+
+.glyphicon { 
+	color: rgba(0,0,0,0.1); 
+	position: relative;
+	left: -27px;
+	top: 2px;
+	cursor: pointer;
+	padding: 6px;
+}
