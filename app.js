@@ -16,6 +16,10 @@ app.get('/kanban', (req, res) => {
 app.get('/eisenhower', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'eisenhower.html'));
 });
+//login
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'login.html'));
+});
 
 // Start the server
 app.listen(PORT, () => {
