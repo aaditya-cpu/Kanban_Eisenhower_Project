@@ -8,6 +8,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Optional: Define routes for specific HTML files if needed
 // Route for the Kanban board
+
+// Example route for the home page
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'login.html'));
+});
+
 app.get('/kanban', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'kanban.html'));
 });
@@ -20,6 +26,8 @@ app.get('/eisenhower', (req, res) => {
 app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'login.html'));
 });
+// Handling admin panel assets
+app.use('/admin', express.static(path.join(__dirname, 'public', 'Admin')));
 
 // Start the server
 app.listen(PORT, () => {

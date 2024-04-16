@@ -1,23 +1,58 @@
 #!/bin/bash
 
-# Set the base directory name
-BASE_DIR="Kanban_Eisenhower_Project"
+# Define the directory structure
+directories=(
+    "/database/main"
+    "/database/license"
+    "/models"
+    "/controllers"
+    "/routes"
+    "/utils"
+    "/services"
+    "/logs"
+)
 
-# Create the base directory
-mkdir -p "$BASE_DIR/public/css" "$BASE_DIR/public/js"
+# Create directories if they don't exist
+for dir in "${directories[@]}"; do
+    if [ ! -d "$dir" ]; then
+        mkdir -p "$dir"
+        echo "Created directory: $dir"
+    else
+        echo "Directory already exists: $dir"
+    fi
+done
 
-# Navigate to the base directory
-cd "$BASE_DIR" || exit
+# Create files if they don't exist
+files=(
+    "/database/databaseConfig.js"
+    "/utils/dbHelper.js"
+    "/utils/errorHandler.js"
+    "/utils/licenseValidator.js"
+    "/services/licenseService.js"
+    "/logs/licenseLog.txt"
+)
 
-# Create HTML files
-touch public/kanban.html public/eisenhower.html
+# Check and create files if they don't exist
+for file in "${files[@]}"; do
+    if [ ! -f "$file" ]; then
+        touch "$file"
+        echo "Created file: $file"
+    else
+        echo "File already exists: $file"
+    fi
+done
 
-# Create the main application file
-touch app.js
+# Check if app.js and package.json exist
+if [ ! -f "app.js" ]; then
+    touch "app.js"
+    echo "Created file: app.js"
+else
+    echo "File already exists: app.js"
+fi
 
-# Provide feedback
-echo "Project structure created successfully."
-
-# List the created structure for verification
-tree
-
+if [ ! -f "package.json" ]; then
+    touch "package.json"
+    echo "Created file: package.json"
+else
+    echo "File already exists: package.json"
+fi
