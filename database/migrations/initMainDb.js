@@ -82,4 +82,4 @@ const initMainDb = () => {
 };
 
 // Run the initialization
-initMainDb();
+module.exports = initMainDb;
