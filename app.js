@@ -10,8 +10,12 @@ const userRoutes = require('./routes/userRoutes');
 const projectRoutes = require('./routes/projectRoutes');
 const taskRoutes = require('./routes/taskRoutes');
 
-// Database configuration
-const database = require('./database/databaseConfig');
+// Database configuration and initialization
+const { mainDb } = require('./database/databaseConfig');
+const initMainDb = require('./database/migrations/initMainDb');
+
+// Initialize the main database
+initMainDb();
 
 // Middlewares
 app.use(express.json());
@@ -50,4 +54,5 @@ app.use('/admin', express.static(path.join(__dirname, 'public', 'Admin')));
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
+  console.log('Database initialized and ready for use.');
 });
